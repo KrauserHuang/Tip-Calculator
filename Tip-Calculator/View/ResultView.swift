@@ -49,9 +49,9 @@ final class ResultView: UIView {
     
     private lazy var hStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
-            AmountView(),
+            AmountView(title: "Total bill", textAlignment: .left),
             UIView(),
-            AmountView(),
+            AmountView(title: "Total tip", textAlignment: .right),
         ])
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -71,6 +71,11 @@ final class ResultView: UIView {
     private func setupUI() {
         backgroundColor = .white
         addSubview(vStackView)
+        
+        addShadow(offset: CGSize(width: 0, height: 3),
+                  color: .black,
+                  radius: 12.0,
+                  opacity: 0.1)
     }
     
     private func setupConstraint() {
@@ -84,33 +89,11 @@ final class ResultView: UIView {
         horizontalLineView.snp.makeConstraints { make in
             make.height.equalTo(2)
         }
-        
-        addShadow(offset: CGSize(width: 0, height: 3),
-                  color: .black,
-                  radius: 12.0,
-                  opacity: 0.1)
     }
     
     private func buildSpacerView(height: CGFloat) -> UIView {
         let view = UIView()
         view.heightAnchor.constraint(equalToConstant: height).isActive = true
         return view
-    }
-}
-
-class AmountView: UIView {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupUI()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("Could not create AmountView")
-    }
-    
-    private func setupUI() {
-        backgroundColor = .red
     }
 }

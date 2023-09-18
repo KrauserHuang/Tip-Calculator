@@ -30,6 +30,7 @@
 		4F0934F82AB0171A0063371B /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0934F72AB0171A0063371B /* UIColor+.swift */; };
 		4F1DA2FB2AB7E88E00B16044 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DA2FA2AB7E88E00B16044 /* LabelFactory.swift */; };
 		4F1DA2FD2AB7F56C00B16044 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DA2FC2AB7F56C00B16044 /* UIView+.swift */; };
+		4F1DA2FF2AB7FF5A00B16044 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DA2FE2AB7FF5A00B16044 /* AmountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		4F0934F72AB0171A0063371B /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4F1DA2FA2AB7E88E00B16044 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		4F1DA2FC2AB7F56C00B16044 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		4F1DA2FE2AB7FF5A00B16044 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				4F0934EB2AB00E980063371B /* BillInputView.swift */,
 				4F0934ED2AB00EB00063371B /* TipInputView.swift */,
 				4F0934EF2AB00F1A0063371B /* SplitInputView.swift */,
+				4F1DA2FE2AB7FF5A00B16044 /* AmountView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F1DA2FF2AB7FF5A00B16044 /* AmountView.swift in Sources */,
 				4F0934AD2AAFFAC50063371B /* CalculatorViewController.swift in Sources */,
 				4F0934E82AB00DDA0063371B /* LogoView.swift in Sources */,
 				4F0934F42AB016E70063371B /* ThemeColor.swift in Sources */,
