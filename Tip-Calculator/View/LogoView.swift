@@ -69,7 +69,7 @@ final class LogoView: UIView {
     }
     
     private func setupUI() {
-        backgroundColor = .red
+        addSubview(hStackView)
     }
     
     private func setupConstraint() {
