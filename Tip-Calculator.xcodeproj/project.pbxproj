@@ -31,6 +31,8 @@
 		4F1DA2FB2AB7E88E00B16044 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DA2FA2AB7E88E00B16044 /* LabelFactory.swift */; };
 		4F1DA2FD2AB7F56C00B16044 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DA2FC2AB7F56C00B16044 /* UIView+.swift */; };
 		4F1DA2FF2AB7FF5A00B16044 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DA2FE2AB7FF5A00B16044 /* AmountView.swift */; };
+		4FBC10752ABAD2820032C37F /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC10742ABAD2820032C37F /* Tip.swift */; };
+		4FBC10772ABAD29F0032C37F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC10762ABAD29F0032C37F /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		4F1DA2FA2AB7E88E00B16044 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		4F1DA2FC2AB7F56C00B16044 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		4F1DA2FE2AB7FF5A00B16044 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		4FBC10742ABAD2820032C37F /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		4FBC10762ABAD29F0032C37F /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 		4F0934A72AAFFAC50063371B /* Tip-Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				4FBC10732ABAD2700032C37F /* Model */,
 				4F1DA2F92AB7E87C00B16044 /* Factory */,
 				4F0934F12AB016B20063371B /* Resources */,
 				4F0934E62AB00DCC0063371B /* View */,
@@ -176,6 +181,7 @@
 				4F0934ED2AB00EB00063371B /* TipInputView.swift */,
 				4F0934EF2AB00F1A0063371B /* SplitInputView.swift */,
 				4F1DA2FE2AB7FF5A00B16044 /* AmountView.swift */,
+				4FBC10762ABAD29F0032C37F /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +211,14 @@
 				4F1DA2FA2AB7E88E00B16044 /* LabelFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		4FBC10732ABAD2700032C37F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4FBC10742ABAD2820032C37F /* Tip.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,8 +379,10 @@
 				4F0934AB2AAFFAC50063371B /* SceneDelegate.swift in Sources */,
 				4F1DA2FB2AB7E88E00B16044 /* LabelFactory.swift in Sources */,
 				4F1DA2FD2AB7F56C00B16044 /* UIView+.swift in Sources */,
+				4FBC10752ABAD2820032C37F /* Tip.swift in Sources */,
 				4F0934F02AB00F1A0063371B /* SplitInputView.swift in Sources */,
 				4F0934EE2AB00EB00063371B /* TipInputView.swift in Sources */,
+				4FBC10772ABAD29F0032C37F /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
