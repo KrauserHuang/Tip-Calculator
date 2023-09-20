@@ -24,4 +24,9 @@ extension UIView {
         layer.masksToBounds = false
         layer.cornerRadius = radius
     }
+    
+    func addRoundedCorner(corners: CACornerMask, radius: CGFloat) {
+        layer.cornerRadius = radius
+        layer.maskedCorners = [corners]
+    }
 }

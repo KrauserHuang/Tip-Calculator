@@ -54,10 +54,6 @@ final class LogoView: UIView {
         return stackView
     }()
     
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//    }
-    
     init() { // will use autolayout, don't need to care about frames
         super.init(frame: .zero)
         setupUI()
