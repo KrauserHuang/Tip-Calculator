@@ -30,6 +30,7 @@
 		4F0934F82AB0171A0063371B /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0934F72AB0171A0063371B /* UIColor+.swift */; };
 		4F1A82992ABBDD4B00038695 /* CalculatorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A82982ABBDD4B00038695 /* CalculatorVM.swift */; };
 		4F1A829B2ABBDE8200038695 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A829A2ABBDE8200038695 /* Result.swift */; };
+		4F1A829D2ABC168100038695 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A829C2ABC168100038695 /* String+.swift */; };
 		4F1DA2FB2AB7E88E00B16044 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DA2FA2AB7E88E00B16044 /* LabelFactory.swift */; };
 		4F1DA2FD2AB7F56C00B16044 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DA2FC2AB7F56C00B16044 /* UIView+.swift */; };
 		4F1DA2FF2AB7FF5A00B16044 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DA2FE2AB7FF5A00B16044 /* AmountView.swift */; };
@@ -77,6 +78,7 @@
 		4F0934F72AB0171A0063371B /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4F1A82982ABBDD4B00038695 /* CalculatorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVM.swift; sourceTree = "<group>"; };
 		4F1A829A2ABBDE8200038695 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		4F1A829C2ABC168100038695 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		4F1DA2FA2AB7E88E00B16044 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		4F1DA2FC2AB7F56C00B16044 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		4F1DA2FE2AB7FF5A00B16044 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				4F0934F72AB0171A0063371B /* UIColor+.swift */,
 				4F1DA2FC2AB7F56C00B16044 /* UIView+.swift */,
+				4F1A829C2ABC168100038695 /* String+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				4F1DA2FF2AB7FF5A00B16044 /* AmountView.swift in Sources */,
 				4F0934AD2AAFFAC50063371B /* CalculatorViewController.swift in Sources */,
 				4F0934E82AB00DDA0063371B /* LogoView.swift in Sources */,
+				4F1A829D2ABC168100038695 /* String+.swift in Sources */,
 				4F0934F42AB016E70063371B /* ThemeColor.swift in Sources */,
 				4F0934EC2AB00E980063371B /* BillInputView.swift in Sources */,
 				4F0934F82AB0171A0063371B /* UIColor+.swift in Sources */,

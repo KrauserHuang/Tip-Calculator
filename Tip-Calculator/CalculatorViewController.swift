@@ -42,6 +42,19 @@ class CalculatorViewController: UIViewController {
         bind()
     }
     
+    private func bind() {
+        let input = CalculatorVM.Input(
+            billPublisher: billInputView.valuePublisher,
+            tipPublisher: Just(.tenPercent).eraseToAnyPublisher(),
+            splitPublisher: Just(5).eraseToAnyPublisher())
+        
+        let output = vm.transform(input: input)
+        
+        output.updateViewPublisher
+            .sink(receiveValue: { print(">>> \($0)") })
+            .store(in: &cancellables)
+    }
+    
     private func setupUI() {
         view.addSubview(vStackView)
         view.backgroundColor = ThemeColor.bg
@@ -74,19 +87,6 @@ class CalculatorViewController: UIViewController {
         splitInputView.snp.makeConstraints { make in
             make.height.equalTo(56)
         }
-    }
-    
-    private func bind() {
-        let input = CalculatorVM.Input(
-            billPublisher: Just(10).eraseToAnyPublisher(),
-            tipPublisher: Just(.tenPercent).eraseToAnyPublisher(),
-            splitPublisher: Just(5).eraseToAnyPublisher())
-        
-        let output = vm.transform(input: input)
-        
-        output.updateViewPublisher
-            .sink(receiveValue: { print(">>> \($0)") })
-            .store(in: &cancellables)
     }
 }
 

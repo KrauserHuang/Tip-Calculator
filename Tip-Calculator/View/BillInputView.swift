@@ -7,6 +7,8 @@
 
 import UIKit
 import SnapKit
+import Combine
+import CombineCocoa
 
 final class BillInputView: UIView {
     
@@ -59,14 +61,30 @@ final class BillInputView: UIView {
         return textField
     }()
     
+    private let billSubject: PassthroughSubject<Double, Never> = .init()
+    private var cancellables = Set<AnyCancellable>()
+    
+    public var valuePublisher: AnyPublisher<Double, Never> {
+        return billSubject.eraseToAnyPublisher()
+    }
+    
     init() { // will use autolayout, don't need to care about frames
         super.init(frame: .zero)
         setupUI()
         setupConstraint()
+        observe()
     }
     
     required init?(coder: NSCoder) {
         fatalError("Could not create BillInputView")
+    }
+    
+    private func observe() {
+        textField.textPublisher
+            .sink { [unowned self] text in
+                billSubject.send(text?.doubleValue ?? 0)
+            }
+            .store(in: &cancellables)
     }
     
     private func setupUI() {
