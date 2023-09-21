@@ -68,6 +68,13 @@ final class BillInputView: UIView {
         return billSubject.eraseToAnyPublisher()
     }
     
+    /*
+     PassthroughSubject跟AnyPublisher都可以丟直出來
+     差別在PassthroughSubject可以丟並且接收，而AnyPublisher只能丟
+     主要可以作為唯讀動作（read only）
+     → 代表就算valuePublisher作為public property，其他元件還是不能對他做修改，只能讀取
+     */
+    
     init() { // will use autolayout, don't need to care about frames
         super.init(frame: .zero)
         setupUI()

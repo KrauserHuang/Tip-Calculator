@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Combine
+import CombineCocoa
 
 final class TipInputView: UIView {
     
@@ -19,16 +21,34 @@ final class TipInputView: UIView {
     
     private lazy var tenPercentTipButton: UIButton = {
         let button = buildTipButton(tip: .tenPercent)
+        button.tapPublisher
+            .flatMap { _ in
+                Just(Tip.tenPercent)
+            }
+            .assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
         return button
     }()
     
     private lazy var fifteenPercentTipButton: UIButton = {
         let button = buildTipButton(tip: .fifteenPercent)
+        button.tapPublisher
+            .flatMap { _ in
+                Just(Tip.fifteenPercent)
+            }
+            .assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
         return button
     }()
     
     private lazy var twentyPercentTipButton: UIButton = {
         let button = buildTipButton(tip: .twentyPercent)
+        button.tapPublisher
+            .flatMap { _ in
+                Just(Tip.twentyPercent)
+            }
+            .assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
         return button
     }()
     
@@ -65,6 +85,19 @@ final class TipInputView: UIView {
         return stackView
     }()
     
+    private var tipSubject: CurrentValueSubject<Tip, Never> = .init(.none)
+//    private var tipSubject: PassthroughSubject<Tip, Never> = .init()
+    private var cancellables = Set<AnyCancellable>()
+    
+    public var valuePublisher: AnyPublisher<Tip, Never> {
+        return tipSubject.eraseToAnyPublisher()
+    }
+    
+    /*
+     CurrentValueSubject跟PassthroughSubject主要的差異是
+     CurrentValueSubject可以存預設值進去
+     */
+    
     init() { // will use auto layout, don't need to care about frames
         super.init(frame: .zero)
         setupUI()
@@ -73,6 +106,10 @@ final class TipInputView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("Could not create TipInputView")
+    }
+    
+    private func observe() {
+        
     }
     
     private func setupUI() {
