@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Combine
 
 class CalculatorViewController: UIViewController {
     
@@ -29,12 +30,16 @@ class CalculatorViewController: UIViewController {
         stackView.spacing = 36
         return stackView
     }()
+    
+    private let vm = CalculatorVM()
+    private var cancellables = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         setupConstraint()
+        bind()
     }
     
     private func setupUI() {
@@ -69,6 +74,19 @@ class CalculatorViewController: UIViewController {
         splitInputView.snp.makeConstraints { make in
             make.height.equalTo(56)
         }
+    }
+    
+    private func bind() {
+        let input = CalculatorVM.Input(
+            billPublisher: Just(10).eraseToAnyPublisher(),
+            tipPublisher: Just(.tenPercent).eraseToAnyPublisher(),
+            splitPublisher: Just(5).eraseToAnyPublisher())
+        
+        let output = vm.transform(input: input)
+        
+        output.updateViewPublisher
+            .sink(receiveValue: { print(">>> \($0)") })
+            .store(in: &cancellables)
     }
 }
 
