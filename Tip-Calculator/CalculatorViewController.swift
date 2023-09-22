@@ -73,7 +73,8 @@ class CalculatorViewController: UIViewController {
         }
         
         resultView.snp.makeConstraints { make in
-            make.height.equalTo(224)
+//            make.height.equalTo(224)
+            make.height.equalTo(295)
         }
         
         billInputView.snp.makeConstraints { make in
