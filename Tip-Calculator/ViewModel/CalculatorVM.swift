@@ -30,9 +30,15 @@ class CalculatorVM {
 //            }
 //            .store(in: &cancellables)
         
-        input.tipPublisher
-            .sink { tip in
-                print("the tip: \(tip)")
+//        input.tipPublisher
+//            .sink { tip in
+//                print("the tip: \(tip)")
+//            }
+//            .store(in: &cancellables)
+        
+        input.splitPublisher
+            .sink { quantity in
+                print("person to split: \(quantity)")
             }
             .store(in: &cancellables)
         
