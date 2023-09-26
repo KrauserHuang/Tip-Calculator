@@ -51,7 +51,9 @@ class CalculatorViewController: UIViewController {
         let output = vm.transform(input: input)
         
         output.updateViewPublisher
-            .sink(receiveValue: { print(">>> \($0)") })
+            .sink(receiveValue: { [unowned self] result in
+                resultView.configure(result: result)
+            })
             .store(in: &cancellables)
     }
     
