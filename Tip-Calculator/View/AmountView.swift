@@ -59,9 +59,9 @@ class AmountView: UIView {
         fatalError("Could not create AmountView")
     }
     
-    public func configure(text: String) {
+    public func configure(amount: Double) {
         let text = NSMutableAttributedString(
-            string: text,
+            string: amount.currencyFormatted,
             attributes: [.font: ThemeFont.bold(ofSize: 24)])
         text.addAttributes([
             .font: ThemeFont.bold(ofSize: 16)

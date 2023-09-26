@@ -36,6 +36,7 @@
 		4F1DA2FB2AB7E88E00B16044 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DA2FA2AB7E88E00B16044 /* LabelFactory.swift */; };
 		4F1DA2FD2AB7F56C00B16044 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DA2FC2AB7F56C00B16044 /* UIView+.swift */; };
 		4F1DA2FF2AB7FF5A00B16044 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1DA2FE2AB7FF5A00B16044 /* AmountView.swift */; };
+		4F598B222AC288A700531AC1 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F598B212AC288A700531AC1 /* Double+.swift */; };
 		4FBC10752ABAD2820032C37F /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC10742ABAD2820032C37F /* Tip.swift */; };
 		4FBC10772ABAD29F0032C37F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC10762ABAD29F0032C37F /* HeaderView.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		4F1DA2FA2AB7E88E00B16044 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		4F1DA2FC2AB7F56C00B16044 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		4F1DA2FE2AB7FF5A00B16044 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		4F598B212AC288A700531AC1 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		4FBC10742ABAD2820032C37F /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		4FBC10762ABAD29F0032C37F /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,6 +217,7 @@
 				4F1A829C2ABC168100038695 /* String+.swift */,
 				4F1A829E2ABC327E00038695 /* UIResponder+.swift */,
 				4F1A82A02ABD332100038695 /* Int+.swift */,
+				4F598B212AC288A700531AC1 /* Double+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				4F1A829B2ABBDE8200038695 /* Result.swift in Sources */,
 				4F1A82992ABBDD4B00038695 /* CalculatorVM.swift in Sources */,
 				4F1DA2FF2AB7FF5A00B16044 /* AmountView.swift in Sources */,
+				4F598B222AC288A700531AC1 /* Double+.swift in Sources */,
 				4F0934AD2AAFFAC50063371B /* CalculatorViewController.swift in Sources */,
 				4F1A82A12ABD332100038695 /* Int+.swift in Sources */,
 				4F0934E82AB00DDA0063371B /* LogoView.swift in Sources */,
