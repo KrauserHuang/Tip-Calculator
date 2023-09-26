@@ -82,6 +82,10 @@ final class SplitInputView: UIView {
         fatalError("Could not create SplitInputView")
     }
     
+    public func reset() {
+        splitSubject.send(1)
+    }
+    
     private func setupUI() {
         [headerView, stackView].forEach(addSubview(_:))
     }

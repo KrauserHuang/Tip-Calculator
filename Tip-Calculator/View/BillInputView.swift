@@ -86,6 +86,11 @@ final class BillInputView: UIView {
         fatalError("Could not create BillInputView")
     }
     
+    public func reset() {
+        textField.text = nil
+        billSubject.send(0)
+    }
+    
     private func observe() {
         textField.textPublisher
             .sink { [unowned self] text in

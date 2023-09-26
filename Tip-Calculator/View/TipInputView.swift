@@ -114,6 +114,10 @@ final class TipInputView: UIView {
         fatalError("Could not create TipInputView")
     }
     
+    public func reset() {
+        tipSubject.send(.none)
+    }
+    
     private func setupUI() {
         [headerView, buttonVStackView].forEach(addSubview(_:))
     }
