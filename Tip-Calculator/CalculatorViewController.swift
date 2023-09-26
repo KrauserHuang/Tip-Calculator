@@ -44,7 +44,7 @@ class CalculatorViewController: UIViewController {
             }.eraseToAnyPublisher()
     }()
     
-    private lazy var logoTapPublisher: AnyPublisher<Void, Never> = {
+    private lazy var logoViewTapPublisher: AnyPublisher<Void, Never> = {
         let tapGesture = UITapGestureRecognizer(target: self, action: nil)
         tapGesture.numberOfTapsRequired = 2
         view.addGestureRecognizer(tapGesture)
@@ -67,7 +67,8 @@ class CalculatorViewController: UIViewController {
         let input = CalculatorVM.Input(
             billPublisher: billInputView.valuePublisher,
             tipPublisher: tipInputView.valuePublisher,
-            splitPublisher: splitInputView.valuePublisher)
+            splitPublisher: splitInputView.valuePublisher,
+            logoViewPublisher: logoViewTapPublisher)
         
         let output = vm.transform(input: input)
         
@@ -76,18 +77,18 @@ class CalculatorViewController: UIViewController {
                 resultView.configure(result: result)
             })
             .store(in: &cancellables)
+        
+        output.resultCalculatorPublisher
+            .sink { _ in
+                print("hey, reset the form please!")
+            }
+            .store(in: &cancellables)
     }
     
     private func observe() {
         viewTapPublisher
             .sink { [unowned self] _ in
                 view.endEditing(true)
-            }
-            .store(in: &cancellables)
-        
-        logoTapPublisher
-            .sink { _ in
-                print("logo view is tapped")
             }
             .store(in: &cancellables)
     }
